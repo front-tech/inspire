@@ -26,7 +26,7 @@
         <ul class="item-list">
           ${listItems.map(item => `
             <li class="list-item">
-              <a href="${item.url}?product=${item.id}">
+              <a href="${item.url+item.id}">
                 <img src="${item.img}">
                 <span>${item.name}</span>
               </a>
