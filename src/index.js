@@ -39,7 +39,7 @@
         <h3>${title}</h3>
         <ul class="item-list">
           ${listItems.map(item => `
-            <li><a href="${item.url}">
+            <li><a href="${item.url}?id=${item.id}">
             <img src="${item.img}">
             ${item.name}</a>
             </li>
