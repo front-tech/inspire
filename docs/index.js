@@ -21,13 +21,16 @@
 
       // creating the inner HTML of the editable list element
       editableListContainer.innerHTML = `
+        <link rel="stylesheet" type="text/css" href="component.css">
         <h3>${title}</h3>
         <ul class="item-list">
           ${listItems.map(item => `
+            <li class="list-item">
               <a href="${item.url}?product=${item.id}">
                 <img src="${item.img}">
-                <div>${item.name}</div>
+                <span>${item.name}</span>
               </a>
+            </li>
           `).join('')}
         </ul>
       `;

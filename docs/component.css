@@ -1,0 +1,33 @@
+ul {
+    padding: 0;
+}
+li,
+div > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-item {
+  display: block;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+
+.list-item a {
+    align-items: center;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.list-item:hover {
+    border: 1px solid blue;
+}
+
+.list-item img {
+    display: block;
+}
