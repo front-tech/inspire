@@ -2,7 +2,7 @@
 
 
 (function() {
-  class EditableList extends HTMLElement {
+  class ItemsList extends HTMLElement {
     constructor() {
       // establish prototype chain
       super();
@@ -10,18 +10,18 @@
       // attaches shadow tree and returns shadow root reference
       const shadow = this.attachShadow({ mode: 'open' });
 
-      // creating a container for the editable-list component
-      const editableListContainer = document.createElement('div');
+      // creating a container for the items-list component
+      const ItemsListContainer = document.createElement('div');
 
       // get attribute values from getters
       const title = this.title;
       const listItems = this.items;
 
       // adding a class to our container for the sake of clarity
-      editableListContainer.classList.add('editable-list');
+      ItemsListContainer.classList.add('items-list');
 
-      // creating the inner HTML of the editable list element
-      editableListContainer.innerHTML = `
+      // creating the inner HTML of the items list element
+      ItemsListContainer.innerHTML = `
         <link rel="stylesheet" type="text/css" href="component.css">
         <h3>${title}</h3>
         <ul class="item-list">
@@ -37,7 +37,7 @@
       `;
 
       // appending the container to the shadow DOM
-      shadow.appendChild(editableListContainer);
+      shadow.appendChild(ItemsListContainer);
     }
 
     // gathering data from element attributes
@@ -60,5 +60,5 @@
   }
 
   // let the browser know about the custom element
-  customElements.define('editable-list', EditableList);
+  customElements.define('items-list', ItemsList);
 })();
