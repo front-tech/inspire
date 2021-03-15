@@ -57,12 +57,11 @@
     }
 
     get items() {
-      const items = [];
+      let items = [];
 
       [...this.attributes].forEach(attr => {
-        if (attr.name.includes('list-item')) {
-            console.log(attr.value);
-          items.push(JSON.parse(attr.value));
+        if (attr.name.includes('items')) {
+          items = JSON.parse(attr.value);
         }
       });
 
