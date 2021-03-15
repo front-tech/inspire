@@ -12,6 +12,7 @@ div > div {
   display: block;
   border: 1px solid gray;
   border-radius: 2px;
+  margin-bottom: 10px;
 }
 
 .list-item a {
