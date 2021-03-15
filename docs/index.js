@@ -9,7 +9,7 @@
       // attaches shadow tree and returns shadow root reference
       const shadow = this.attachShadow({ mode: 'open' });
 
-      // creating a container for the editable-list component
+      // creating a container for the items-list component
       const ItemsListContainer = document.createElement('div');
 
       // get attribute values from getters
@@ -17,9 +17,9 @@
       const listItems = this.items;
 
       // adding a class to our container for the sake of clarity
-      ItemsListContainer.classList.add('editable-list');
+      ItemsListContainer.classList.add('items-list');
 
-      // creating the inner HTML of the editable list element
+      // creating the inner HTML of the items list element
       ItemsListContainer.innerHTML = `
         <link rel="stylesheet" type="text/css" href="component.css">
         <h3>${title}</h3>
