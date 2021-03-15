@@ -21,21 +21,6 @@
 
       // creating the inner HTML of the editable list element
       editableListContainer.innerHTML = `
-        <style>
-          li, div > div {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-          }
-
-          .icon {
-            background-color: #fff;
-            border: none;
-            cursor: pointer;
-            float: right;
-            font-size: 1.8rem;
-          }
-        </style>
         <h3>${title}</h3>
         <ul class="item-list">
           ${listItems.map(item => `
