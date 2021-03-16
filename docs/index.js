@@ -1,11 +1,15 @@
 'use strict';
 
+import {bootstrapInspire, mountInspire, unmountInspire} from './module';
+
+
 
 (function() {
   class ItemsList extends HTMLElement {
     constructor() {
       // establish prototype chain
       super();
+      console.log(bootstrapInspire);
 
       // attaches shadow tree and returns shadow root reference
       const shadow = this.attachShadow({ mode: 'open' });
