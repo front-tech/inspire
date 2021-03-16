@@ -8,6 +8,9 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'docs'),
     clean: true,
+    library: {
+        type: 'system',
+    },
   },
   plugins: [
       new HtmlWebpackPlugin({
