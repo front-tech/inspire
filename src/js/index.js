@@ -91,19 +91,19 @@ class ItemsList extends HTMLElement {
     let items = [{
       id: 1,
       name: "Tractor Blue",
-      url: "/shell/products/",
+      url: "/products/",
       img: "https://raw.githubusercontent.com/neuland/micro-frontends/master/0-model-store/images/tractor-blue-thumb.jpg"
     },
     {
       id: 2,
       name: "Tractor Green",
-      url: "/shell/products/",
+      url: "/products/",
       img: "https://raw.githubusercontent.com/neuland/micro-frontends/master/0-model-store/images/tractor-green-thumb.jpg"
     },
     {
       id: 3,
       name: "Tractor Red",
-      url: "/shell/products/",
+      url: "/products/",
       img: "https://raw.githubusercontent.com/neuland/micro-frontends/master/0-model-store/images/tractor-red-thumb.jpg"
     }];
 
