@@ -1,11 +1,15 @@
-import {bootstrapInspire, mountInspire, unmountInspire} from './module';
+import singleSpaHtml from 'single-spa-html';
+
+const htmlLifecycles = singleSpaHtml({
+  template: '<inspireComp></inspireComp>',
+})
+
 
 (function() {
   class ItemsList extends HTMLElement {
     constructor() {
       // establish prototype chain
       super();
-      console.log(bootstrapInspire);
 
       // attaches shadow tree and returns shadow root reference
       const shadow = this.attachShadow({ mode: 'open' });
@@ -59,5 +63,9 @@ import {bootstrapInspire, mountInspire, unmountInspire} from './module';
   }
 
   // let the browser know about the custom element
-  customElements.define('items-list', ItemsList);
+  customElements.define('inspireComp', ItemsList);
 })();
+
+export const bootstrapInspire = htmlLifecycles.bootstrap;
+export const mountInspire = htmlLifecycles.mount;
+export const unmountInspire = htmlLifecycles.unmount;
