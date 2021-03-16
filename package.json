@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "single-spa-html": "^1.3.0",
     "webpack": "^5.25.1",
     "webpack-cli": "^4.5.0"
   }
