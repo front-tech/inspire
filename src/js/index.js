@@ -104,7 +104,7 @@ class ItemsList extends HTMLElement {
 window.customElements.define('inspire-comp', ItemsList);
 
 const htmlLifecycles = singleSpaHtml({
-  template: '<inspire-comp></inspire-comp>',
+  template: props => `<inspire-comp title="${props.title}" items="${props.items}"></inspire-comp>`,
 })
 export const bootstrap = htmlLifecycles.bootstrap;
 export const mount = htmlLifecycles.mount;
