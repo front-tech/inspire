@@ -83,17 +83,35 @@ class ItemsList extends HTMLElement {
 
   // gathering data from element attributes
   get title() {
-    return this.getAttribute('title') || '';
+    // return this.getAttribute('title') || '';
+    return 'RECOMMENDATIONS';
   }
 
   get items() {
-    let items = [];
+    let items = [{
+      id: 1,
+      name: "Tractor Blue",
+      url: "https://front-tech.github.io/products/",
+      img: "https://raw.githubusercontent.com/neuland/micro-frontends/master/0-model-store/images/tractor-blue-thumb.jpg"
+    },
+    {
+      id: 2,
+      name: "Tractor Green",
+      url: "https://front-tech.github.io/products/",
+      img: "https://raw.githubusercontent.com/neuland/micro-frontends/master/0-model-store/images/tractor-green-thumb.jpg"
+    },
+    {
+      id: 3,
+      name: "Tractor Red",
+      url: "https://front-tech.github.io/products/",
+      img: "https://raw.githubusercontent.com/neuland/micro-frontends/master/0-model-store/images/tractor-red-thumb.jpg"
+    }];
 
-    [...this.attributes].forEach(attr => {
-      if (attr.name.includes('items')) {
-        items = JSON.parse(attr.value);
-      }
-    });
+    // [...this.attributes].forEach(attr => {
+    //   if (attr.name.includes('items')) {
+    //     items = JSON.parse(attr.value);
+    //   }
+    // });
 
     return items;
   }
