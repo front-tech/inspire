@@ -106,6 +106,6 @@ window.customElements.define('inspire-comp', ItemsList);
 const htmlLifecycles = singleSpaHtml({
   template: '<inspire-comp></inspire-comp>',
 })
-export const bootstrapInspire = htmlLifecycles.bootstrap;
-export const mountInspire = htmlLifecycles.mount;
-export const unmountInspire = htmlLifecycles.unmount;
+export const bootstrap = htmlLifecycles.bootstrap;
+export const mount = htmlLifecycles.mount;
+export const unmount = htmlLifecycles.unmount;
